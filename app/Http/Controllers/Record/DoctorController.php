@@ -9,15 +9,15 @@ use function view;
 
 class DoctorController extends Controller
 {
-    public function index(Specialty $specialty)
-    {
-        $doctors = Doctor::all();
-        return view('pages.index');
-    }
 
+    /**
+     * Detail page Doctor
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function record(Specialty $specialty, Doctor $doctor)
     {
-
-        return view('pages.detail',['specialty' => $specialty, 'doctor' => $doctor] );
+        return view('pages.detail', ['specialty' => $specialty, 'doctor' => $doctor]);
     }
+
 }

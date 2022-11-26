@@ -11,6 +11,13 @@ use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
+    /**
+     * Add slot
+     * Ajax
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+
     public function create(Specialty $specialty, Doctor $doctor, Request $request)
     {
 

@@ -16,6 +16,7 @@ class SchedulesController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
+
     public function list(Specialty $specialty, Doctor $doctor, Request $request)
     {
         $times_array = [
@@ -28,7 +29,6 @@ class SchedulesController extends Controller
             '20:00:00',
         ];
 
-
         $date_sql = date("Y-m-d", strtotime($request->date));
 
         $schedules_day = Schedule::query()
@@ -37,9 +37,6 @@ class SchedulesController extends Controller
                 ['doctor_id', $doctor->id],
                 ['specialty_id', $specialty->id],
             ])->pluck('start');
-
-        //$schedules_day = json_decode($schedules_day, true);
-
 
         foreach ($times_array as $key => $time) {
             $times[$key]["id"] = $key . 'lsp';
@@ -55,7 +52,6 @@ class SchedulesController extends Controller
             }
 
         }
-
 
         return response()->json([$times]);
     }
