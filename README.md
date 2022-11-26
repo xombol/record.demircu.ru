@@ -13,3 +13,13 @@ The project was developed for online appointment with any of the doctors.
 The functionality is limited only by the service for sending SMS to the phone.  Below is the calendar that was used, from part of it improvements in functionalit
 
 - [EvoCalendar](https://edlynvillegas.github.io/evo-calendar/).
+
+
+##Improvements that need to be made
+
+- make connections for models
+- admin panel
+- template site
+- rebuild the SchedulesController controller (pubf create)
+- fix the bug with the time of 12:00 (sometimes it appears, not only at this time
+- sms confirmation of the recording (prod)
